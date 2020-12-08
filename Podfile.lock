@@ -10,6 +10,12 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
   - ObjectMapper (4.2.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SDWebImage (5.9.4):
     - SDWebImage/Core (= 5.9.4)
   - SDWebImage/Core (5.9.4)
@@ -24,6 +30,8 @@ DEPENDENCIES:
   - Moya
   - NVActivityIndicatorView (~> 4.8.0)
   - ObjectMapper
+  - RxCocoa
+  - RxSwift
   - SDWebImage
   - SwiftMessages (from `https://github.com/MahmoudNasserIbtikar/SwiftMessages.git`)
   - Windless (from `https://github.com/Sob7y/Windless`)
@@ -36,6 +44,9 @@ SPEC REPOS:
     - Moya
     - NVActivityIndicatorView
     - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SDWebImage
 
 EXTERNAL SOURCES:
@@ -59,10 +70,13 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
   Windless: 9dea19b4d239d948e4cec3891fac1fe863e13136
 
-PODFILE CHECKSUM: 6e77c141fa9b2cef4ed75edf4b3eb8179197808f
+PODFILE CHECKSUM: 169560ef33a22c1f8fb33abb990d5cf178f22ca8
 
 COCOAPODS: 1.9.3

@@ -8,7 +8,6 @@ def ui_pods
   pod 'Windless', :git => 'https://github.com/Sob7y/Windless'
 end
 
-
 def date_tools
   pod 'DateToolsSwift'
 end
@@ -19,22 +18,24 @@ def network_pods
   pod 'SDWebImage'
 end
 
-target 'rxSwift' do
+target 'rxSwiftExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
   # Pods for rxSwift
+  pod 'RxSwift'
+  pod 'RxCocoa'
   
   ui_pods
   date_tools
   network_pods
   
-  target 'rxSwiftTests' do
+  target 'rxSwiftExampleTests' do
     inherit! :search_paths
     # Pods for testing
   end
   
-  target 'rxSwiftUITests' do
+  target 'rxSwiftExampleUITests' do
     # Pods for testing
   end
   

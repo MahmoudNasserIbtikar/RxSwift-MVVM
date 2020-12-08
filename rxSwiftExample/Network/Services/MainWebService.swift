@@ -10,24 +10,8 @@ import Foundation
 import Moya
 
 final class MainWebService {
-    static func fetch(endPoint: TargetType, _ compltion: @escaping (Result<Any, NetworkError>) -> Void) {
-        MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin()]).request(MultiTarget(endPoint)) { (response) in
-            switch response {
-            case .success(let response):
-                do {
-                    let jsonResponse = try response.mapJSON()
-                    compltion(Result.success(jsonResponse))
-                } catch {
-                    print(error.localizedDescription)
-                }
-                
-            case .failure(let error):
-                compltion(.failure(NetworkError(error: error)))
-            }
-        }
-    }
     
-    static func fetch2(endPoint: TargetType, _ compltion: @escaping (Result<Any, NetworkError>, Int) -> Void) {
+    static func fetch(endPoint: TargetType, _ compltion: @escaping (Result<Any, NetworkError>, Int) -> Void) {
         MoyaProvider<MultiTarget>(plugins: [NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))]).request(MultiTarget(endPoint)) { (response) in
             switch response {
             case .success(let response):

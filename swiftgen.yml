@@ -1,5 +1,5 @@
-input_dir: rxSwift
-output_dir: rxSwift
+input_dir: rxSwiftExample
+output_dir: rxSwiftExample
 strings:
   inputs:
     - Resources/Locale/en.lproj/Localizable.strings
