@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  rxSwift
+
+  Created by Mahmoud Nasser on 12/8/20.
+  
+*/
+
+// MARK: - Messages
+"message.error.title" = "خطأ" ;
+"message.success.title" = "تم بنجاح" ;
+"networkError.noInternet" = "تأكد من إتصالك بالإنترنت";
+
+// MARK: Upload Image
+"upload.takePhoto" = "كاميرا" ;
+"upload.photoLibrary" = "مكتبة الصور" ;
+"upload.cancel" = "إلغاء" ;
