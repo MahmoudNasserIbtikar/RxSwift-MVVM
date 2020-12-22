@@ -16,21 +16,6 @@ enum RouteSubjectsApi {
 extension RouteSubjectsApi: TargetType {
     
     var baseURL: URL {
-        
-//        switch self {
-//        case .getSubjects(page: let page, perPage: let perPage):
-//
-//            var urlComponents = URLComponents()
-//            urlComponents.scheme = "https"
-//            urlComponents.host = "https://smea-pc.ibtikar.sa"
-//            urlComponents.path = ApiUrls.Apis.subjects
-////            urlComponents.queryItems = [
-////                URLQueryItem(name: "page", value: String(page)),
-////                URLQueryItem(name: "per_page", value: String(perPage))
-////            ]
-//            return urlComponents.url!
-//        }
-        
         return URL(string: "https://smea-pc.ibtikar.sa")!
     }
     
