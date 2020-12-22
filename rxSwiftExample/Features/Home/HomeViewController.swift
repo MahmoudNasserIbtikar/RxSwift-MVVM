@@ -13,7 +13,11 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    var homeViewModel = HomeViewModel()
+    lazy var homeViewModel: HomeViewModel = {
+        let viewModel = HomeViewModel()
+        return viewModel
+    }()
+    
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -22,6 +26,10 @@ class HomeViewController: BaseViewController {
         setupView()
         getSubjects()
     }
+}
+
+// MARK: - Private Functions
+extension HomeViewController {
     
     private func setupView() {
         registerCollectionViewCells()
@@ -35,7 +43,7 @@ class HomeViewController: BaseViewController {
             forCellWithReuseIdentifier: SubjectCollectionViewCell.identifier)
     }
     
-    func setupCollectionViewLayout() {
+    private func setupCollectionViewLayout() {
         let cellWidth = (UIScreen.main.bounds.width - 30 ) / 2
         let cellheight = cellWidth
         let cellSize = CGSize(width: cellWidth,

@@ -35,7 +35,6 @@ class HomeViewModel {
             return
         }
         
-        
         self.loading.onNext(true)
 
         service.getSubjects(
