@@ -66,6 +66,7 @@
 		6F3BD171257FAF7500C9B6F5 /* loadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BD16D257FAF7500C9B6F5 /* loadingView.swift */; };
 		6F3BD178257FBD4000C9B6F5 /* SubjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BD176257FBD4000C9B6F5 /* SubjectCollectionViewCell.swift */; };
 		6F3BD179257FBD4000C9B6F5 /* SubjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3BD177257FBD4000C9B6F5 /* SubjectCollectionViewCell.xib */; };
+		6FCA6B592592176E00020724 /* FileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA6B582592176D00020724 /* FileModel.swift */; };
 		A9AD4B3B2AC075C9EEF47098 /* Pods_rxSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED16A7C43CC2279D51F98EE /* Pods_rxSwiftExample.framework */; };
 		D71E6E68147A723DF3AFDA3E /* Pods_rxSwiftExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0AAA5CE696298640377FA0 /* Pods_rxSwiftExampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -160,6 +161,7 @@
 		6F3BD16D257FAF7500C9B6F5 /* loadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingView.swift; sourceTree = "<group>"; };
 		6F3BD176257FBD4000C9B6F5 /* SubjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F3BD177257FBD4000C9B6F5 /* SubjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		6FCA6B582592176D00020724 /* FileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModel.swift; sourceTree = "<group>"; };
 		9BA86FD21CBDBD924DB5956E /* Pods-rxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxSwift.release.xcconfig"; path = "Target Support Files/Pods-rxSwift/Pods-rxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		A460CCF6B91985FD26DD27DC /* Pods-rxSwiftExample-rxSwiftExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxSwiftExample-rxSwiftExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-rxSwiftExample-rxSwiftExampleUITests/Pods-rxSwiftExample-rxSwiftExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AED16A7C43CC2279D51F98EE /* Pods_rxSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +328,7 @@
 		6F284D05257F82D800AB4D5C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F3BD1B125801D2000C9B6F5 /* Fonts */,
 				6F284D51257F882A00AB4D5C /* Assets */,
 				6F284D50257F881A00AB4D5C /* Locale */,
 				6F284CA0257F802F00AB4D5C /* Info.plist */,
@@ -409,6 +412,7 @@
 			children = (
 				6F284D90257F963500AB4D5C /* SubjectModel.swift */,
 				6F284D8F257F963500AB4D5C /* SubjectsResponseModel.swift */,
+				6FCA6B582592176D00020724 /* FileModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,6 +443,13 @@
 				6F3BD177257FBD4000C9B6F5 /* SubjectCollectionViewCell.xib */,
 			);
 			path = "CollectionView Cells";
+			sourceTree = "<group>";
+		};
+		6F3BD1B125801D2000C9B6F5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7F97141B67D51B9E36D251B2 /* Pods */ = {
@@ -739,6 +750,7 @@
 				6F284D47257F86C500AB4D5C /* Configuration.swift in Sources */,
 				6F284CEF257F82AE00AB4D5C /* BaseResponse.swift in Sources */,
 				6F284D42257F86C500AB4D5C /* Constant.swift in Sources */,
+				6FCA6B592592176E00020724 /* FileModel.swift in Sources */,
 				6F284D55257F887100AB4D5C /* Localized+Static arabic.swift in Sources */,
 				6F284CFE257F82AE00AB4D5C /* Float+Extensions.swift in Sources */,
 				6F284D0E257F831400AB4D5C /* MainWebService.swift in Sources */,

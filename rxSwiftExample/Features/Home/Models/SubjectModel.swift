@@ -14,14 +14,16 @@ class SubjectModel: Mappable {
     var id: String?
     var title: String?
     var type: Int?
-
+    var file: FileModel?
+    
     func mapping(map: Map) {
         id <- map["id"]
         title <- map["title"]
         type <- map["type"]
+        file <- map["file"]
     }
     
     required init?(map: Map) {
-
+        
     }
 }

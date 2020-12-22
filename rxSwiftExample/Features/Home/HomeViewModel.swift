@@ -16,7 +16,8 @@ class HomeViewModel {
     
     public let subjects: PublishSubject<[SubjectModel]> = PublishSubject()
     public let loading: PublishSubject<Bool> = PublishSubject()
-    
+    public let error : PublishSubject<NetworkError> = PublishSubject()
+
     private let disposable = DisposeBag()
 
     init(service: HomeWebServiceProtocol = HomeWebService.shared) {
@@ -45,7 +46,7 @@ class HomeViewModel {
             case .failure(let error):
                 print(error)
                 if error.message != "Request explicitly cancelled." {
-                    //                        self.onNetworkError?(error)
+                    self.error.onNext(error)
                 }
             }
         }

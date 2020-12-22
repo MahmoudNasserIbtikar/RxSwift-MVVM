@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -55,6 +55,12 @@ class HomeViewController: UIViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: SubjectCollectionViewCell.identifier, cellType: SubjectCollectionViewCell.self)) {  (row,subject,cell) in
                 cell.subjectModel = subject
             }.disposed(by: disposeBag)
+        
+        homeViewModel.error.observeOn(MainScheduler.instance).bind { (error) in
+            if error.code == 6 {
+                self.showError(message: L10n.NetworkError.noInternet)
+            }
+        }.disposed(by: disposeBag)
     }
     
 }

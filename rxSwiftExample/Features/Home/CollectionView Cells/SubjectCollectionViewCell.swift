@@ -8,13 +8,14 @@
 import UIKit
 
 class SubjectCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var cardView: UIView!
-
+    @IBOutlet weak var subjectImageView: UIImageView!
+    
     var subjectModel: SubjectModel? {
         didSet {
-            titleLabel.text = subjectModel?.title
+            bindData()
         }
     }
     
@@ -34,6 +35,18 @@ class SubjectCollectionViewCell: UICollectionViewCell {
             masksToBounds: false)
         
         titleLabel.textAlignment = .center
+        
     }
-
+    
+    private func bindData() {
+        
+        titleLabel.text = subjectModel?.title
+        
+        if let consultantPath  = subjectModel?.file?.path{
+            let url = URL(string: "https://smea-pc.ibtikar.sa" + consultantPath)
+            subjectImageView.sd_setImage(with: url)
+        }else{
+            subjectImageView.image =  nil
+        }
+    }
 }
