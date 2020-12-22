@@ -34,6 +34,8 @@ class SubjectCollectionViewCell: UICollectionViewCell {
             cornerRadius: CGFloat(8),
             masksToBounds: false)
         
+        subjectImageView.layer.cornerRadius = 4
+        cardView.backgroundColor = .aliceBlue
         titleLabel.textAlignment = .center
         
     }

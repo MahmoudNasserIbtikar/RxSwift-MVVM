@@ -12,11 +12,16 @@ import RxSwift
 
 class HomeViewModel {
     
+    public enum HomeError {
+        case internetError(NetworkError)
+        case serverError(SubjectsResponseModel)
+    }
+    
     weak var service: HomeWebServiceProtocol?
     
     public let subjects: PublishSubject<[SubjectModel]> = PublishSubject()
     public let loading: PublishSubject<Bool> = PublishSubject()
-    public let error : PublishSubject<NetworkError> = PublishSubject()
+    public let error : PublishSubject<HomeError> = PublishSubject()
 
     private let disposable = DisposeBag()
 
@@ -41,12 +46,15 @@ class HomeViewModel {
 
             switch result {
             case .success(let response):
-                
-                self.subjects.onNext(response.data ?? [])
+                if (response.statusCode ?? 0) >= 200 && (response.statusCode ?? 0) < 300 {
+                    self.subjects.onNext(response.data ?? [])
+                } else {
+                    self.error.onNext(.serverError(response))
+                }
             case .failure(let error):
                 print(error)
                 if error.message != "Request explicitly cancelled." {
-                    self.error.onNext(error)
+                    self.error.onNext(.internetError(error))
                 }
             }
         }
